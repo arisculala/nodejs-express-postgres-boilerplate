@@ -65,7 +65,6 @@ class UserService {
         status: HttpStatusCode.BadRequest
       });
     }
-    console.log('updates', updates);
     const updatedUser = await UserModel.findIdAndUpdate(id, updates, {
       new: true,
       runValidators: true
